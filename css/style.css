@@ -1,3 +1,9 @@
-html {
-    background-color: antiquewhite;
+@import url("navBar.css");
+@import url("accueil.css");
+
+body{
+    text-align: center;
+    background-image: url("../img/jupiter.jpg");
+    background-size: cover;
 }
+
