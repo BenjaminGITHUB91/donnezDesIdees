@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planète en 3D</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script>
+    // 1. Créer la scène, la caméra et le rendu
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // 2. Ajouter une sphère (la planète)
+    const geometry = new THREE.SphereGeometry(8, 50, 50);
+    const textureLoader = new THREE.TextureLoader();
+    const texture = textureLoader.load('./img/8k_jupiter.jpg');
+
+    const material = new THREE.MeshBasicMaterial({ map: texture });
+    const planet = new THREE.Mesh(geometry, material);
+    scene.add(planet);
+
+
+    // 3. Positionner la caméra
+    camera.position.z = 15;
+
+    // 4. Animation de rotation
+    function animate() {
+      requestAnimationFrame(animate);
+      planet.rotation.y += 0.0025; // Faire tourner la planète sur l'axe Y
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    // 5. Ajuster le rendu si la fenêtre est redimensionnée
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>

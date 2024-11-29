@@ -1,20 +1,45 @@
 nav{
     display: flex;
-    text-align: center;
     background-color: #1a00b0;
     border-radius: 10px;
 }
 
-.divNav {
-    margin: 0 20px;
-    padding: 0 10px;
-    color: rgb(255, 255, 255);
-    border-radius: 10px;
-    
+
+nav > h1 {
+    width:50%; 
+    margin-left: 20px;
+    color:beige;
+    font-family: Rubik Iso;
 }
 
-.divNav:hover {
-    background-color: #10006d;
-    
+#divNav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    left: 0;
+}
 
+.divUnBtn {
+    margin: 0 20px;
+    padding: 0 10px;
+}
+
+.divUnBtn > a:link, .divUnBtn > a:visited, .divUnBtn > a:link {
+    width: 100%;
+    font-family: Rubik Iso;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    text-decoration: none;
+    color:antiquewhite;
+}
+
+.divUnBtn > a:hover{
+    background-color: #190396;
+    color:#FFFDD0;
 }
