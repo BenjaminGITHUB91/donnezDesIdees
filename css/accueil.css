@@ -7,8 +7,10 @@ main{
 }
 
 #divAccueil{
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.662);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
     color: rgb(27, 0, 135);
     border-radius: 10px;
     width: 60%;
@@ -20,7 +22,7 @@ main{
     background-color: #1a00b0;
     padding: 20px;
     margin-top: 30px;
-    border: 1px solid black;
+    border: 2px solid white;
     border-radius: 10px;
 
     font-family: Rubik Iso;
@@ -28,9 +30,15 @@ main{
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 2px;
+
+    transition: 0.5s;
 }
 
 #btnFormulaire:hover {
     background-color: #190396;
-    border: 2px solid white;
+    transform: translateY(5px);
+}
+
+#btnFormulaire:active {
+    transform: translateY(20px);
 }

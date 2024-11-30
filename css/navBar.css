@@ -4,12 +4,12 @@ nav{
     border-radius: 10px;
 }
 
-
 nav > h1 {
     width:50%; 
     margin-left: 20px;
     color:beige;
     font-family: Rubik Iso;
+    font-size: 2em;
 }
 
 #divNav{
@@ -17,12 +17,14 @@ nav > h1 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    left: 0;
+}
+
+#divNav:last-child {
+    margin-right: 10px;
 }
 
 .divUnBtn {
-    margin: 0 20px;
-    padding: 0 10px;
+    margin: 0 3px;
 }
 
 .divUnBtn > a:link, .divUnBtn > a:visited, .divUnBtn > a:link {
@@ -39,6 +41,8 @@ nav > h1 {
     
     text-decoration: none;
     color:antiquewhite;
+
+    transition: 0.5s;
 }
 
 .divUnBtn > a:hover{
