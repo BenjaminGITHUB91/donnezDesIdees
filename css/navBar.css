@@ -26,15 +26,17 @@ nav > h1 {
 }
 
 .divUnBtn > a:link, .divUnBtn > a:visited, .divUnBtn > a:link {
-    width: 100%;
     font-family: Rubik Iso;
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 2px;
+
+    padding: 10px;
     margin: 0 auto;
+    
     border-radius: 10px;
     border: 2px solid white;
-    padding: 10px;
+    
     text-decoration: none;
     color:antiquewhite;
 }
@@ -42,4 +44,5 @@ nav > h1 {
 .divUnBtn > a:hover{
     background-color: #190396;
     color:#FFFDD0;
+    transform: translateY(5px);
 }

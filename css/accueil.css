@@ -1,5 +1,36 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 #divAccueil{
-    background-color: rgba(106, 185, 255, 0.283);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.662);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(27, 0, 135);
     border-radius: 10px;
+    width: 60%;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+#btnFormulaire {
+    background-color: #1a00b0;
+    padding: 20px;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    font-family: Rubik Iso;
+    color: antiquewhite;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+#btnFormulaire:hover {
+    background-color: #190396;
+    border: 2px solid white;
 }
