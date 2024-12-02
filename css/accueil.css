@@ -1,3 +1,8 @@
+body{
+    background-image: url("../img/jupiter.jpg");
+    background-size: cover;
+}
+
 main{
     display: flex;
     flex-direction: column;

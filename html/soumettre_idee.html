@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Soumettre une idee</title>
+
+    <!--Fichier CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!--Fichier JS-->
+    <script type="module" src="/js/script.js"></script>
+</head> 
+
+<body>
+    <!--div vide auquelle on ajoutera la navbar via le script ci-dessous-->
+    <div id="navbar"></div>
+    <script>
+        fetch('/html/navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+            }).catch(err => console.error('Erreur lors du chargement de la navbar :', err));
+    </script>
+
+
+
+</body>

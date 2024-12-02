@@ -4,12 +4,31 @@ nav{
     border-radius: 10px;
 }
 
-nav > h1 {
-    width:50%; 
+nav > a {
+    width: 100%;
+    transition: 0.3s;
+}
+
+nav > a:link, a:visited{
+    text-decoration: none;
+}
+
+nav > a:active {
+    transform: translateY(10px);
+}
+
+nav > a > h1 {
+    width:100%; 
     margin-left: 20px;
-    color:beige;
+    color:rgb(255, 255, 196);
     font-family: Rubik Iso;
     font-size: 2em;
+    transition: 0.3s;
+}
+
+nav > a > h1:hover {
+    color: white;
+    transform: translateY(5px);
 }
 
 #divNav{
@@ -46,7 +65,6 @@ nav > h1 {
 }
 
 .divUnBtn > a:hover{
-    background-color: #190396;
-    color:#FFFDD0;
+    background-color: #12007a;
     transform: translateY(5px);
 }
