@@ -12,7 +12,8 @@
         <!--Fichier JS-->
         <script type="module" src="/js/script.js"></script>
         <script type="module" src="/js/script_EnvoiIdee.js"></script>
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>    </head> 
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    </head> 
 
         <body>
             <!--div vide auquelle on ajoutera la navbar via le script ci-dessous-->
@@ -26,22 +27,24 @@
             </script>
 
             <div id="FormulaireEnvoi">
-                <div>
-                    <label for="name">Ton nom</label>
-                    <input type="text" id="nom">
-                </div>
-
-                <div>
-                    <label for="email">Ton mail</label>
-                    <input type="email" id="mail">
-                </div>
-
-                <div>
-                    <label for="idee">Ton idee</label>
-                    <textarea id="idee" placeholder="Donne ton idee"></textarea>
-                </div>
-
-                <button id="boutonEnvoi">Clique</button>
+                <form id="envoiMail">
+                    <div>
+                        <label for="name">Ton nom</label>
+                        <input type="text" name="from_name">
+                    </div>
+    
+                    <div>
+                        <label for="email">Ton mail</label>
+                        <input type="email" name="from_mail">
+                    </div>
+    
+                    <div>
+                        <label for="idee">Ton idée</label>
+                        <textarea name="message" placeholder="Donne ton idee"></textarea>
+                    </div>
+    
+                    <input type="submit" value="Clique" id="boutonEnvoi">
+                </form>
             </div>
 
         </body>

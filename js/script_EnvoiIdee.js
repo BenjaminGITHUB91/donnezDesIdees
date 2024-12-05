@@ -1,35 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    (function() {
+        emailjs.init({
+            publicKey: "KYWOF4whp8CaKVW5a"
+        });
+    })();
 
-    document.getElementById("boutonEnvoi").addEventListener("click", envoiIdee);
-    document.getElementById("idee").addEventListener("keypress", (event) => {
-        if(event.key === "Enter") {
-            envoiIdee();
-        }
+    document.getElementById("envoiMail").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_f4zjy6p", "template_e56mqi8", this)
+            .then(() => {
+                    console.log("Email bien envoyé");
+                },(error) => {
+                    console.log("Erreur : ", error);
+                }
+            );
     })
-
-    function envoiIdee() {
-        const nom = document.getElementById("nom").value;
-        const mail = document.getElementById("mail").value;
-        const idee = document.getElementById("idee").value;
-
-        if(!nom){
-            return;
-        }
-
-        emailjs.init("KYWOF4whp8CaKVW5a");
-
-        emailjs.send("service_f4zjy6p", "template_e56mqi8",
-            {
-                from_name: nom,
-                from_mail: mail,
-                message: idee
-            }
-        ).then(function(response) {
-                console.log("Email bien envoyé", response);
-            }, function(error) {
-                console.log("Erreur : ", error);
-            }
-        );
-    }
 });
