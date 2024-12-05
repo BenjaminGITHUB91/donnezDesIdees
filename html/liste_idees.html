@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des idees</title>
+
+    <!--Fichier CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/listeIdees.css">
+
+    <!--Fichier JS-->
+    <script type="module" src="/js/script.js"></script>
+    <script type="module" src="/js/script_EnvoiIdee.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head> 
+
+<body>
+    <!--div vide auquelle on ajoutera la navbar via le script ci-dessous-->
+    <div id="navbar"></div>
+    <script>
+        fetch('/html/navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+            }).catch(err => console.error('Erreur lors du chargement de la navbar :', err));
+    </script>
+
+    <h1 id="titrePage">Liste des idees envoyees</h1>
+    <div id="listeIdees">
+        <div id="uneIdee">
+            <div id="infoDestinataire">
+                <p>Nom : Patrick</p> 
+                <p>Email : patrick@adufrick@gmail.com</p>
+            </div>
+            <p>Lorem ispum</p>
+        </div>
+
+        <div id="uneIdee">
+            <div id="infoDestinataire">
+                <p>Nom : Sinsiniini</p> 
+                <p>Email : dgfssfdfkljdnslkgjhdlkgjh@adufrick@gmail.com</p>
+            </div>
+            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+        </div>
+
+        <div id="uneIdee">
+            <div id="infoDestinataire">
+                <p>Nom : Lezard</p> 
+                <p>Email : lezzzzzzzzzarrrrrrrrrrrrrrrrrrd@adufrick@gmail.com</p>
+            </div>
+            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.Lorem ispum</p>
+        </div>
+
+
+    </div>
+</body>

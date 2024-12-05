@@ -1,0 +1,28 @@
+
+#titrePage{
+    color: white;
+    text-align: center;
+    font-family: Rubik Iso;
+}
+
+#uneIdee{
+    background: rgba(43, 43, 43, 0.6);
+    border-radius: 5px;
+    color:bisque;
+    margin: 13px;
+    padding: 10px;
+    transition: 0.2s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+#uneIdee:hover{
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#infoDestinataire {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+

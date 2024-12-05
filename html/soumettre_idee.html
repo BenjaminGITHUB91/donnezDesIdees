@@ -1,50 +1,50 @@
-    <!DOCTYPE html>
-    <html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Soumettre une idee</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Soumettre une idee</title>
 
-        <!--Fichier CSS-->
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
-        <link rel="stylesheet" type="text/css" href="/css/idee.css">
+    <!--Fichier CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/idee.css">
 
-        <!--Fichier JS-->
-        <script type="module" src="/js/script.js"></script>
-        <script type="module" src="/js/script_EnvoiIdee.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    </head> 
+    <!--Fichier JS-->
+    <script type="module" src="/js/script.js"></script>
+    <script type="module" src="/js/script_EnvoiIdee.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head> 
 
-        <body>
-            <!--div vide auquelle on ajoutera la navbar via le script ci-dessous-->
-            <div id="navbar"></div>
-            <script>
-                fetch('/html/navbar.html')
-                    .then(response => response.text())
-                    .then(html => {
-                        document.getElementById('navbar').innerHTML = html;
-                    }).catch(err => console.error('Erreur lors du chargement de la navbar :', err));
-            </script>
+<body>
+    <!--div vide auquelle on ajoutera la navbar via le script ci-dessous-->
+    <div id="navbar"></div>
+    <script>
+        fetch('/html/navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+            }).catch(err => console.error('Erreur lors du chargement de la navbar :', err));
+    </script>
 
-            <div id="FormulaireEnvoi">
-                <form id="envoiMail">
-                    <div>
-                        <label for="name">Ton nom</label>
-                        <input type="text" name="from_name">
-                    </div>
-    
-                    <div>
-                        <label for="email">Ton mail</label>
-                        <input type="email" name="from_mail">
-                    </div>
-    
-                    <div>
-                        <label for="idee">Ton idée</label>
-                        <textarea name="message" placeholder="Donne ton idee"></textarea>
-                    </div>
-    
-                    <input type="submit" value="Clique" id="boutonEnvoi">
-                </form>
+    <div id="FormulaireEnvoi">
+        <form id="envoiMail">
+            <div>
+                <label for="name">Ton nom</label>
+                <input type="text" name="from_name">
             </div>
 
-        </body>
+            <div>
+                <label for="email">Ton mail</label>
+                <input type="email" name="from_mail">
+            </div>
+
+            <div>
+                <label for="idee">Ton idée</label>
+                <textarea name="message" placeholder="Donne ton idee"></textarea>
+            </div>
+
+            <input type="submit" value="Clique" id="boutonEnvoi">
+        </form>
+    </div>
+
+</body>
