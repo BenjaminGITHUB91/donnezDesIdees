@@ -20,7 +20,7 @@
 }
 
 
-#FormulaireEnvoi button {
+#FormulaireEnvoi #boutonEnvoi {
     background: #00ff88;
     color: #1a1a2e;
     border: none;
@@ -31,7 +31,11 @@
     transition: all 0.3s ease;
 }
 
-#FormulaireEnvoi button:hover {
+#FormulaireEnvoi #boutonEnvoi:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+}
+#FormulaireEnvoi #boutonEnvoi:active{
+    background-color: #397d3f;
+    transform: scale(0.95); 
 }
