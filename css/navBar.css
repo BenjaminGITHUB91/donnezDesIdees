@@ -1,0 +1,70 @@
+nav{
+    display: flex;
+    background-color: #1a00b0;
+    border-radius: 10px;
+}
+
+nav > a {
+    width: 100%;
+    transition: 0.3s;
+}
+
+nav > a:link, a:visited{
+    text-decoration: none;
+}
+
+nav > a:active {
+    transform: translateY(10px);
+}
+
+nav > a > h1 {
+    width:100%; 
+    margin-left: 20px;
+    color:rgb(255, 255, 196);
+    font-family: Rubik Iso;
+    font-size: 2em;
+    transition: 0.3s;
+}
+
+nav > a > h1:hover {
+    color: white;
+    transform: translateY(5px);
+}
+
+#divNav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#divNav:last-child {
+    margin-right: 10px;
+}
+
+.divUnBtn {
+    margin: 0 3px;
+}
+
+.divUnBtn > a:link, .divUnBtn > a:visited, .divUnBtn > a:link {
+    font-family: Rubik Iso;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    padding: 10px;
+    margin: 0 auto;
+    
+    border-radius: 10px;
+    border: 2px solid white;
+    
+    text-decoration: none;
+    color:antiquewhite;
+
+    transition: 0.5s;
+}
+
+.divUnBtn > a:hover{
+    background-color: #12007a;
+    transform: translateY(5px);
+}

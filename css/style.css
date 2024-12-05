@@ -1,0 +1,12 @@
+@import url("navBar.css");
+@import url("accueil.css");
+
+/*import de la police*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+.rubik-iso-regular {
+    font-family: "Rubik Iso", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+

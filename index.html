@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Super page trop trop bien</title>
+
+    <!--Fichier CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/idee.css">
+
+</head>
+
+<body>
+    <!--div vide auquelle on ajoutera la navbar via le script ci-dessous-->
+    <div id="navbar"></div>
+    <script>
+        fetch('./html/navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+            }).catch(err => console.error('Erreur lors du chargement de la navbar :', err));
+    </script>
+
+    <main>
+        <div id="divAccueil">
+            Bienvenue sur notre site Web pour le cours de Conception et programmation de sites Web - 8WEB101<br>
+            En cliquant sur le bouton ci-dessous, vous allez pouvoir nous aider a trouver une idee de site web!
+        </div>
+
+        <a href="html/soumettre_idee.html">
+            <button id="btnFormulaire">
+                Proposer une idee
+            </button>
+        </a>
+
+
+    </main>
+</body>
+
+</html>
