@@ -1,8 +1,8 @@
 /* Variables de thème */
 :root {
-    --bg-color: white;
+    --bg-color: rgb(173, 158, 158);
     --text-color: black;
-    --input-bg: white;
+    --input-bg: rgba(54, 23, 209, 0.389);
     --input-border: gray;
     --input-text: black;
     --text-color-light: black;
