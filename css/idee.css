@@ -1,37 +1,73 @@
-#FormulaireEnvoi label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: white;
+#ConteneurFormulaire {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-#FormulaireEnvoi input, textarea {
+#Formulaire {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    backdrop-filter: blur(10px);
+    animation: float 6s ease-in-out infinite;
+}
+
+.form_info {
+    margin-bottom: 1.5rem;
+}
+
+.form_info label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.form_info input, .form_info textarea {
     width: 100%;
     padding: 0.8rem;
     border: none;
-    border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    font-size: 1rem;
-}
-
-#FormulaireEnvoi textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-
-#FormulaireEnvoi button {
-    background: #00ff88;
-    color: #1a1a2e;
-    border: none;
-    padding: 1rem 2rem;
+    color: white;
     border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-#FormulaireEnvoi button:hover {
+.form_info input:focus, .form_info textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#boutonEnvoi {
+    background: #190396;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#boutonEnvoi:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 180, 219, 0.4);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+#messageBravo{
+    display: none;
+    color: white;
+    text-align: center;
+}
+
+#messageErreur{
+    display: none;
+    color: white;
+    text-align: center;
 }
