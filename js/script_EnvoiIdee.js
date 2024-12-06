@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })();
 
     function validerFormulaireVide(event){
-        // Recup des champs
+        // Recup du form
         const name = document.querySelector('input[name="from_name"]').value;
         const email = document.querySelector('input[name="from_mail"]').value;
         const message = document.querySelector('textarea[name="message"]').value;
