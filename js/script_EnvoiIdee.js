@@ -1,3 +1,5 @@
+import * as ws from '/js/websocket.js';
+
 document.addEventListener("DOMContentLoaded", () => {
 
     (function() {
@@ -8,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("Formulaire").addEventListener("submit", function(event) {
         event.preventDefault();
+
         const nom = this.from_name.value;
         const mail = this.from_mail.value;
         const idee = this.message.value;
@@ -39,5 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             );
         }
+
+            let jsonInfosIdee = {nom : this.from_name.value , email : this.from_mail.value , idee : this.message.value};
+            ws.envoyerUneIdee(JSON.stringify(jsonInfosIdee));
     })
 });
