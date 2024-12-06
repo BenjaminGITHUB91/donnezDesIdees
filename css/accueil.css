@@ -1,9 +1,32 @@
-body{
-    background-image: url("../img/jupiter.jpg");
-    background-size: cover;
+/* Variables de thème */
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --input-bg: white;
+    --input-border: gray;
+    --input-text: black;
+    --text-color-light: black;
+    --text-color-dark: #f5f5f5;
 }
 
-main{
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --input-bg: #333;
+    --input-border: #555;
+    --input-text: #f5f5f5;
+}
+
+/* Styles généraux */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +34,12 @@ main{
     height: 100%;
 }
 
-#divAccueil{
+main[data-theme="dark"] {
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+/* Styles spécifiques */
+#divAccueil {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.662);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -21,22 +49,49 @@ main{
     width: 60%;
     margin-top: 50px;
     padding: 15px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+form {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    border-radius: 10px;
+    padding: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
+}
+
+form input,
+form textarea {
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+/* Bouton Formulaire */
 #btnFormulaire {
     background-color: #1a00b0;
     padding: 20px;
     margin-top: 30px;
     border: 2px solid white;
     border-radius: 10px;
-
     font-family: Rubik Iso;
     color: antiquewhite;
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 2px;
-
-    transition: 0.5s;
+    transition: background-color 0.5s ease, transform 0.3s ease;
 }
 
 #btnFormulaire:hover {
@@ -46,4 +101,26 @@ main{
 
 #btnFormulaire:active {
     transform: translateY(20px);
+}
+
+/* Bouton de changement de thème */
+#toggleTheme {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+#toggleTheme:hover {
+    background-color: var(--input-border);
+    color: var(--bg-color);
+}
+
+#idee {
+    height: 150px; /* Définir la hauteur ici (ajustez la valeur selon votre préférence) */
+    resize: vertical; /* Permet de redimensionner la textarea uniquement verticalement */
 }

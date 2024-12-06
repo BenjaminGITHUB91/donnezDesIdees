@@ -1,7 +1,10 @@
-nav{
+nav {
     display: flex;
     background-color: #1a00b0;
     border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between; /* Assure que le titre et le bouton de thème sont bien espacés */
 }
 
 nav > a {
@@ -9,7 +12,7 @@ nav > a {
     transition: 0.3s;
 }
 
-nav > a:link, a:visited{
+nav > a:link, a:visited {
     text-decoration: none;
 }
 
@@ -18,9 +21,8 @@ nav > a:active {
 }
 
 nav > a > h1 {
-    width:100%; 
     margin-left: 20px;
-    color:rgb(255, 255, 196);
+    color: rgb(255, 255, 196);
     font-family: Rubik Iso;
     font-size: 2em;
     transition: 0.3s;
@@ -31,11 +33,11 @@ nav > a > h1:hover {
     transform: translateY(5px);
 }
 
-#divNav{
+#divNav {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between; /* Centrer le titre et aligner le bouton à droite */
 }
 
 #divNav:last-child {
@@ -43,7 +45,7 @@ nav > a > h1:hover {
 }
 
 .divUnBtn {
-    margin: 0 3px;
+    margin: 0 10px;
 }
 
 .divUnBtn > a:link, .divUnBtn > a:visited, .divUnBtn > a:link {
@@ -51,20 +53,51 @@ nav > a > h1:hover {
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 2px;
-
     padding: 10px;
     margin: 0 auto;
-    
     border-radius: 10px;
     border: 2px solid white;
-    
     text-decoration: none;
-    color:antiquewhite;
-
+    color: antiquewhite;
     transition: 0.5s;
 }
 
-.divUnBtn > a:hover{
+.divUnBtn > a:hover {
     background-color: #12007a;
     transform: translateY(5px);
+}
+
+/* Style spécifique du bouton thème */
+.divBtnTheme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toggleTheme {
+    background-color: #f4f4f4;
+    color: #333;
+    border: none;
+    padding: 10px 20px; /* Augmente la taille du bouton */
+    font-size: 16px; /* Taille de texte plus grande pour une meilleure visibilité */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+#toggleTheme:hover {
+    background-color: #333;
+    color: #f4f4f4;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark #toggleTheme {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body.dark #toggleTheme:hover {
+    background-color: #555;
+    color: #fff;
 }
