@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+  .idea {
+    margin: 10px;
+    padding: 15px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    width: 40%;
+  }
+  .idea:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+  .final {
+    font-size: 1.5em;
+    font-weight: bold;  
+    margin-top: 20px;
+  }
+
+  #restartButton {
+    display: none;
+  }

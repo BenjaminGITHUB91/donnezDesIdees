@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trouve la meilleur idée</title>
+
+    <!--Fichier CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/tournoi.css">
+
+
+    <!--Fichier JS-->
+    <script src="/js/style.js"></script>
+    <script src="/js/tournoi.js"></script>
+    
+</head> 
+
+
+<body>
+    <!--div vide auquelle on ajoutera la navbar via le script ci-dessous-->
+    <div id="navbar"></div>
+    <script>
+        fetch('/html/navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+            }).catch(err => console.error('Erreur lors du chargement de la navbar :', err));
+    </script>
+
+    <h1>Tournoi des idées</h1>
+
+    <div id="game-area">
+        <p>Chargement des idées...</p>
+    </div>
+
+    <div id="restart">
+        <button id="restart">
+            Recommencer
+        </button>
+    </div>
+
+</body>
