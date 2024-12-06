@@ -1,4 +1,4 @@
-import * as ws from '/js/websocket.js';
+// import * as ws from '/js/websocket.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             );
         }
 
-            let jsonInfosIdee = {nom : this.from_name.value , email : this.from_mail.value , idee : this.message.value};
-            ws.envoyerUneIdee(JSON.stringify(jsonInfosIdee));
+            // let jsonInfosIdee = {nom : this.from_name.value , email : this.from_mail.value , idee : this.message.value};
+            // ws.envoyerUneIdee(JSON.stringify(jsonInfosIdee));
     })
 });
