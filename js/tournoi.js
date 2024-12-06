@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Charger les idées depuis le fichier JSON
     fetch('/js/json/idees.json')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Erreur lors du chargement des données');
         }
-        return response.json(); // Convertir en JSON
+        return response.json(); 
       })
-      .then((ideas) => {
-        initializeTournament(ideas);
+      .then((idée) => {
+        initializeTournament(idée);
       })
       .catch((error) => {
         console.error(error);
@@ -16,32 +15,28 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
   
-  
-  // Fonction principale pour initialiser et démarrer le tournoi
-  function initializeTournament(ideas) {
+
+  function initializeTournament(idée) {
     const gameArea = document.getElementById('game-area');
     const restartButton = document.getElementById('restartButton');
   
-    // Filtrer les idées pour enlever les doublons et les entrées vides
-    const uniqueIdeas = [...new Map(ideas.map((item) => [item.idee, item])).values()].filter(
+    const idéeUnique = [...new Map(idée.map((item) => [item.idee, item])).values()].filter(
       (idea) => idea.idee.trim() !== ''
     );
   
-    // Vérifier s'il y a des idées valides
-    if (uniqueIdeas.length === 0) {
+    if (idéeUnique.length === 0) {
       gameArea.innerHTML = '<p>Aucune idée valide trouvée.</p>';
       return;
     }
   
-    // Fonction pour lancer un tour
-    function playRound(ideas) {
-      if (ideas.length === 1) {
-        displayWinner(ideas[0]);
+    function playRound(idée) {
+      if (idée.length === 1) {
+        displayWinner(idée[0]);
         return;
       }
   
       // Sélectionner deux idées pour ce tour
-      const [idea1, idea2, ...remainingIdeas] = ideas;
+      const [idea1, idea2, ...idéesRestantes] = idée;
   
       // Afficher les deux idées
       gameArea.innerHTML = `
@@ -55,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         element.addEventListener('click', (e) => {
           const chosenIndex = parseInt(e.target.dataset.index, 10);
           const winner = chosenIndex === 1 ? idea1 : idea2;
-          playRound([...remainingIdeas, winner]);
+          playRound([...idéesRestantes, winner]);
         });
       });
     }
@@ -63,17 +58,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Afficher le gagnant final
     function displayWinner(winner) {
       gameArea.innerHTML = `
-        <p class="final">🎉 L'idée gagnante est : <strong>${winner.idee}</strong> par ${winner.nom} 🎉</p>
+        <p class="final"> L'idée gagnante est : <strong>${winner.idee}</strong> par ${winner.nom} </p>
       `;
       restartButton.style.display = 'block';
     }
   
     // Démarrer le tournoi
-    playRound(uniqueIdeas);
+    playRound(idéeUnique);
   
     // Activer le bouton "Recommencer"
     restartButton.addEventListener('click', () => {
-      playRound(uniqueIdeas); // Redémarrer le tournoi
+      playRound(idéeUnique); // Redémarrer le tournoi
     });
   }
   
