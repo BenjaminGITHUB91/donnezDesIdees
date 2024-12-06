@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
   
+  
   // Fonction principale pour initialiser et démarrer le tournoi
   function initializeTournament(ideas) {
     const gameArea = document.getElementById('game-area');
