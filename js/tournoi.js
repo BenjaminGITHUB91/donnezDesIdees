@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Afficher le gagnant final
     function displayWinner(winner) {
       gameArea.innerHTML = `
-        <p class="final"> L'idée gagnante est : <strong>${winner.idee}</strong> par ${winner.nom} </p>
+        <p class="final"> L'idée gagnante est : " <strong>${winner.idee}</strong> " par ${winner.nom}. </p>
       `;
       restartButton.style.display = 'block';
     }

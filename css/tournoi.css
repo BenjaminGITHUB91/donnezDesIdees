@@ -46,10 +46,18 @@ body {
   transform: scale(0.95);
 }
 
+
+#restart{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100%;
+  margin-bottom: 50px;
+}
 #restartButton{
   display: inline-block;
   text-decoration: none;
-  background-color: #1a00b0;
+  background-color: transparent;
   color: bisque;
   font-family: Rubik Iso, sans-serif;
   font-weight: bold;
@@ -57,10 +65,9 @@ body {
   letter-spacing: 2px;
   padding: 15px 30px;
   margin-top: 20px;;
-  border: 2px solid white;
+  border: 2px solid #007BFF;
   border-radius: 10px;
   transition: background-color 0.5s ease, transform 0.3s ease;
-  text-align: center;
 }
 
 #restartButton:hover {
@@ -71,3 +78,5 @@ body {
 #restartButton:active {
   transform: translateY(3px);
 }
+
+p{color:bisque;}
