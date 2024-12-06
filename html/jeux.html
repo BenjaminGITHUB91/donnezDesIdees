@@ -3,17 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Liste des idées</title>
+    <title>Elire la meilleur idée</title>
 
     <!--Fichier CSS-->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/listeIdees.css">
+    <link rel="stylesheet" type="text/css" href="/css/tournoi.css">
+
 
     <!--Fichier JS-->
-    <script type="module" src="/js/websocket.js"></script>
-    <script type="module" src="/js/gererIdees.js"></script>
     <script src="/js/style.js"></script>
+    <script src="/js/tournoi.js"></script>
+    
 </head> 
+
 
 <body>
     <!--div vide auquelle on ajoutera la navbar via le script ci-dessous-->
@@ -25,25 +27,19 @@
                 document.getElementById('navbar').innerHTML = html;
             }).catch(err => console.error('Erreur lors du chargement de la navbar :', err));
     </script>
-    <div id="divTitre">
-        <h1 id="titrePage">Liste des idées envoyées</h1>
-    </div>
-
-    <div id="game">
-        <a href="/html/jeux.html">Jouer</a>
-    </div>
     
-    <div id="listeIdees">
-        <!-- Format d'une idee
-        <div id="uneIdee">
-            <div id="infoDestinataire">
-                <p>Nom : nom</p> 
-                <p>Email : email</p>
-            </div>
-            <p>idee</p>
-        </div>
-        -->
-
-
+    <div id="divTitre">
+        <h1>Tournoi des idées</h1>
     </div>
+
+    <div id="game-area">
+        
+    </div>
+
+    <div id="restart">
+        <button id="restartButton">
+            Recommencer
+        </button>
+    </div>
+
 </body>

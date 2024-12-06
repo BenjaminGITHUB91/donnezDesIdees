@@ -100,6 +100,12 @@ body.dark #toggleTheme {
     background-image: url("/img/bck_sombre.jpg");
 }
 
-body.dark #toggleTheme:hover {
+.divUnBtn:hover{
+transform:translateY(3px);
+transition:0.3s;
+}
 
+.divUnBtn:active{
+    transform:translateY(-3px);
+    transition:0.3s;
 }

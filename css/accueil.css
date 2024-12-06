@@ -44,10 +44,11 @@ main[data-theme="dark"] {
 #divAccueil {
     text-align: center;
     background-color: rgba(0, 121, 201, 0.582);
+    border-radius: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17.5px;
     color: bisque;
-    border-radius: 10px;
+    
     width: 40%;
     margin-top: 150px;
     padding: 15px;
@@ -145,4 +146,35 @@ form textarea:focus {
 ::-webkit-scrollbar-thumb:hover {
     background: #003cc9; 
     
+}
+#game{
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement si nécessaire */
+    height: 100%;
+    margin-bottom: 50px;
+}
+#game a {
+    display: inline-block;
+    text-decoration: none;
+    color: bisque;
+    font-family: Rubik Iso, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 15px 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+#game a:hover {
+    background-color: #190396;
+    transform: translateY(-3px);
+    
+}
+
+#game a:active {
+    transform: translateY(3px);
 }

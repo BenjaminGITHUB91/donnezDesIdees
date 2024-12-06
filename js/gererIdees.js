@@ -9,7 +9,7 @@ export function envoyerIdee(jsonInfosIdee) {
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error(`Erreur HTTP! statut: ${response.status}`);
+            throw new Error(`Erreur HTTP! statut test : ${response.status}`);
         }
         return response.json(); // Convertir la réponse en JSON
     })

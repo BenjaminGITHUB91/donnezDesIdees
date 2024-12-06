@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+  .idea {
+    margin: 10px;
+    padding: 15px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    width: 40%;
+    transition: 0.4s;
+  }
+  .idea:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+  .final {
+    font-size: 1.5em;
+    font-weight: bold;  
+    margin-top: 20px;
+  }
+
+  #restartButton {
+    display: none;
+  }
+
+  #divTitre{
+    display: flex;
+    justify-content: center;
+  }
+
+  h1{
+    margin-top: 50px;
+    padding: 15px;
+    color:bisque;
+    background-color: rgba(0, 121, 201, 0.582);
+    border-radius: 10px;
+  }
+.idea{
+    color: black;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+#versus{
+  color: darkred;
+}
+.idea:hover{
+  transform: scale(1.05);
+}
+
+.idea:active{
+  transform: scale(0.95);
+}
+
+
+#restart{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100%;
+  margin-bottom: 50px;
+}
+#restartButton{
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  color: bisque;
+  font-family: Rubik Iso, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 15px 30px;
+  margin-top: 20px;;
+  border: 2px solid #007BFF;
+  border-radius: 10px;
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+#restartButton:hover {
+  background-color: #190396;
+  transform: translateY(-3px);
+}
+
+#restartButton:active {
+  transform: translateY(3px);
+}
+
+p{color:bisque;}
+
