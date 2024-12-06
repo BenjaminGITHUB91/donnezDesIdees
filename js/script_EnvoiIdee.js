@@ -8,7 +8,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     })();
 
+    function validerFormulaireVide(event){
+        // Recup du form
+        const name = document.querySelector('input[name="from_name"]').value;
+        const email = document.querySelector('input[name="from_mail"]').value;
+        const message = document.querySelector('textarea[name="message"]').value;
+        //verif des champs vides
+        if(!name || !email || !message){
+            event.preventDefault(); //pas de soumission ici
+            alert("Tous les champs doivent être remplis !");
+            return false; 
+        }
+        return true;
+    }
+
     document.getElementById("envoiMail").addEventListener("submit", function(event) {
+        if (!validerFormulaireVide(event)) {
+            return; // si un des champs du form est vide, on empeche l'envoi pour pas spam
+        }
+        
         event.preventDefault();
 
             
