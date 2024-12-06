@@ -34,6 +34,10 @@
     transition: all 0.3s ease;
 }
 
+.form_info textarea {
+    height: 100px;
+}
+
 .form_info input:focus, .form_info textarea:focus {
     outline: none;
     background: rgba(255, 255, 255, 0.2);
@@ -69,6 +73,6 @@
 
 #messageErreur{
     display: none;
-    color: white;
+    color: red;
     text-align: center;
 }

@@ -1,3 +1,4 @@
+
 import * as ws from '/js/websocket.js';
 import * as gererIdees from '/js/gererIdees.js';
 
@@ -19,12 +20,22 @@ document.addEventListener("DOMContentLoaded", () => {
         if(!nom || !mail || !idee){
             document.getElementById("messageErreur").style.display = "block";
             document.getElementById("messageBravo").style.display = "none";
-            gsap.from('#messageErreur', {
-                y: -20,
-                opacity: 0,
-                duration: 0.5,
-                ease: "power2.out"
-            });
+            gsap.fromTo(
+                '#messageErreur',
+                { x: -3 },
+                
+                {
+                  x: 3, 
+                  duration: 0.1,
+                  opacity: 1,
+                  ease: "linear",
+                  repeat: 3, 
+                  yoyo: true, 
+                  onComplete: () => {
+                    gsap.to('#messageErreur', { x: 0, ease: "linear" }); 
+                  }
+                }
+              );
         }else{
             // emailjs.sendForm("service_f4zjy6p", "template_e56mqi8", this)
             // .then(() => {
@@ -36,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         y: -20,
                         opacity: 0,
                         duration: 0.5,
-                        ease: "power2.out"
+                        ease: "ease"
                     });
             //     },(error) => {
             //         console.log("Erreur : ", error);
@@ -44,9 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
             // );
             console.log("mail envoye (non)");
         }
-
             let jsonInfosIdee = {nom : this.from_name.value , email : this.from_mail.value , idee : this.message.value};
             gererIdees.envoyerIdee(jsonInfosIdee);
             ws.envoyerUneIdee(JSON.stringify(jsonInfosIdee));
+
     })
 });
