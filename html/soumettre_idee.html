@@ -13,6 +13,7 @@
     <script type="module" src="/js/script.js"></script>
     <script type="module" src="/js/script_EnvoiIdee.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head> 
 
 <body>
@@ -26,25 +27,37 @@
             }).catch(err => console.error('Erreur lors du chargement de la navbar :', err));
     </script>
 
-    <div id="FormulaireEnvoi">
-        <form id="envoiMail">
-            <div>
+    <div id="ConteneurFormulaire">
+
+        <form id="Formulaire">
+
+            <div class="form_info">
                 <label for="name">Ton nom</label>
-                <input type="text" name="from_name">
+                <input id="name" type="text" name="from_name">
             </div>
 
-            <div>
+            <div class="form_info">
                 <label for="email">Ton mail</label>
-                <input type="email" name="from_mail">
+                <input id="email" type="email" name="from_mail">
             </div>
 
-            <div>
+            <div class="form_info">
                 <label for="idee">Ton idée</label>
-                <textarea name="message" placeholder="Donne ton idee"></textarea>
+                <textarea id="idee" name="message"></textarea>
             </div>
 
             <input type="submit" value="Clique" id="boutonEnvoi">
+
+            <div id="messageBravo">
+                Bravo ton message à bien été transmis. Merci beaucoup !
+            </div>
+
+            <div id="messageErreur">
+                Merci de bien vouloir remplir tout les champs avant d'envoyer ton idée !
+            </div>
+
         </form>
+
     </div>
 
 </body>
