@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Liste des idees</title>
+    <title>Liste des idées</title>
 
     <!--Fichier CSS-->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -25,8 +25,10 @@
                 document.getElementById('navbar').innerHTML = html;
             }).catch(err => console.error('Erreur lors du chargement de la navbar :', err));
     </script>
-
-    <h1 id="titrePage">Liste des idees envoyees</h1>
+    <div id="divTitre">
+        <h1 id="titrePage">Liste des idées envoyées</h1>
+    </div>
+    
     <div id="listeIdees">
         <!-- Format d'une idee
         <div id="uneIdee">

@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "nom": "Alice Dupont",
+    "email": "alice.dupont@example.com",
+    "idee": "Créer une application pour partager des recettes de cuisine."
+  },
+  {
+    "nom": "Jean Martin",
+    "email": "jean.martin@example.com",
+    "idee": "Développer un outil collaboratif pour la gestion de projets scolaires."
+  },
+  {
+    "nom": "Benjamin",
+    "email": "adresse.discord.exact@gmail.com",
+    "idee": "blablalbalbla"
+  },
+  {
+    "nom": "Benjamin",
+    "email": "adresse.discord.exact@gmail.com",
+    "idee": "Un super site de cuisine l'idee tah originale"
+  },
+  {
+    "nom": "Benjamin",
+    "email": "adresse.discord.exact@gmail.com",
+    "idee": "Un site de vente de voiture"
+  },
+  {
+    "nom": "Benjamin",
+    "email": "adresse.discord.exact@gmail.com",
+    "idee": "Un site pour selectionner les endroits ou on est alle"
+  },
+  {
+    "nom": "Benjamin",
+    "email": "adresse.discord.exact@gmail.com",
+    "idee": "Un site de vente de voiture"
+  },
+  {
+    "nom": "Benjamin",
+    "email": "adresse.discord.exact@gmail.com",
+    "idee": "idee"
+  }
+]

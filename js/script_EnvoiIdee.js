@@ -1,4 +1,5 @@
 import * as ws from '/js/websocket.js';
+import * as gererIdees from '/js/gererIdees.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -25,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 ease: "power2.out"
             });
         }else{
-            emailjs.sendForm("service_f4zjy6p", "template_e56mqi8", this)
-            .then(() => {
+            // emailjs.sendForm("service_f4zjy6p", "template_e56mqi8", this)
+            // .then(() => {
                     console.log("Email bien envoyé");
                     document.getElementById("messageErreur").style.display = "none";
                     document.getElementById("messageBravo").style.display = "block";
@@ -37,13 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         duration: 0.5,
                         ease: "power2.out"
                     });
-                },(error) => {
-                    console.log("Erreur : ", error);
-                }
-            );
+            //     },(error) => {
+            //         console.log("Erreur : ", error);
+            //     }
+            // );
+            console.log("mail envoye (non)");
         }
 
             let jsonInfosIdee = {nom : this.from_name.value , email : this.from_mail.value , idee : this.message.value};
+            gererIdees.envoyerIdee(jsonInfosIdee);
             ws.envoyerUneIdee(JSON.stringify(jsonInfosIdee));
     })
 });

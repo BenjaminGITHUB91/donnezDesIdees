@@ -1,28 +1,50 @@
+#divTitre{
+    display: flex;
+    justify-content: center;
+}
 
 #titrePage{
- 
+    padding: 10px;
+    color: bisque;
+    background: rgba(43, 43, 43, 0.6);
+    border-radius: 10px;
     text-align: center;
-    font-family: Rubik Iso;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+}
+
+#listeIdees{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #uneIdee{
-    background: rgba(43, 43, 43, 0.6);
-    border-radius: 5px;
+    background: rgba(43, 43, 43, 0.4);
+    border-radius: 10px;
     color:bisque;
     margin: 13px;
     padding: 10px;
     transition: 0.2s;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+    width: 600px;
 }
 
 #uneIdee:hover{
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(43, 43, 43, 0.8);
 }
 
 #infoDestinataire {
     display: flex;
-    gap: 15px;
-    justify-content: center;
+    gap: 10px;
 }
+
+#infoDestinataire > p {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
 

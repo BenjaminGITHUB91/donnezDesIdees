@@ -1,20 +1,21 @@
 /* Variables de thème */
 :root {
-    --bg-color: rgb(173, 158, 158);
-    --text-color: black;
-    --input-bg: rgba(54, 23, 209, 0.389);
-    --input-border: gray;
+    --input-border: #fff;
     --input-text: black;
     --text-color-light: black;
     --text-color-dark: #f5f5f5;
+    background-image: url("/img/bck_clair.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 [data-theme="dark"] {
-    --bg-color: #121212;
-    --text-color: #f5f5f5;
-    --input-bg: #333;
-    --input-border: #555;
+    --input-border: #fff;
     --input-text: #f5f5f5;
+    
+    background-image: url("/img/bck_sombre.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Styles généraux */
@@ -23,7 +24,8 @@ body {
     color: var(--text-color);
     font-family: Arial, sans-serif;
     background-size: cover;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-image 0.5s ease, color 0.5s ease;
+    transition: 1s;
 }
 
 main {
@@ -41,13 +43,13 @@ main[data-theme="dark"] {
 /* Styles spécifiques */
 #divAccueil {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.662);
+    background-color: rgba(0, 121, 201, 0.582);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
-    color: rgb(27, 0, 135);
+    font-size: 17.5px;
+    color: bisque;
     border-radius: 10px;
-    width: 60%;
-    margin-top: 50px;
+    width: 40%;
+    margin-top: 150px;
     padding: 15px;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
@@ -55,7 +57,7 @@ main[data-theme="dark"] {
 form {
     background-color: var(--bg-color);
     color: var(--text-color);
-    border: 1px solid var(--input-border);
+    border: 2px solid var(--input-border);
     border-radius: 10px;
     padding: 20px;
     transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
@@ -65,7 +67,7 @@ form input,
 form textarea {
     background-color: var(--input-bg);
     color: var(--input-text);
-    border: 1px solid var(--input-border);
+    border: 2px solid var(--input-border);
     border-radius: 5px;
     padding: 10px;
     width: 100%;
@@ -83,7 +85,7 @@ form textarea:focus {
 #btnFormulaire {
     background-color: #1a00b0;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
     border: 2px solid white;
     border-radius: 10px;
     font-family: Rubik Iso;
@@ -107,7 +109,7 @@ form textarea:focus {
 #toggleTheme {
     background-color: var(--input-bg);
     color: var(--text-color);
-    border: 1px solid var(--input-border);
+    border: 2px solid var(--input-border);
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -123,4 +125,24 @@ form textarea:focus {
 #idee {
     height: 150px; /* Définir la hauteur ici (ajustez la valeur selon votre préférence) */
     resize: vertical; /* Permet de redimensionner la textarea uniquement verticalement */
+}
+
+
+
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: rgb(118, 141, 255);
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(0, 208, 255); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 9, 133); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #003cc9; 
+    
 }
