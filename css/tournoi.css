@@ -25,3 +25,49 @@ body {
   #restartButton {
     display: none;
   }
+
+  h1{
+    margin-top: 50px;
+    color:bisque;
+  }
+.idea{
+    color: black;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+#versus{
+  color: darkred;
+}
+.idea:hover{
+  transform: scale(1.05);
+}
+
+.idea:active{
+  transform: scale(0.95);
+}
+
+#restartButton{
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1a00b0;
+  color: bisque;
+  font-family: Rubik Iso, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 15px 30px;
+  margin-top: 20px;;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: background-color 0.5s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+#restartButton:hover {
+  background-color: #190396;
+  transform: translateY(-3px);
+}
+
+#restartButton:active {
+  transform: translateY(3px);
+}
